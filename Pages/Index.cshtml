@@ -1,0 +1,51 @@
+﻿@page
+@model AccountingPortfolio.Pages.IndexModel
+@{
+    Layout = "_Layout";
+}
+
+<!-- Fixed Header -->
+<header>
+    <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#financial">Financial Services</a>
+        <a href="#news">News & Press</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Home / Profile Section -->
+<section id="home" class="section profile-card">
+    <h1>John Doe</h1>
+    <h2>Accounting Specialist</h2>
+    <p>Helping small businesses stay compliant, organized, and financially confident.</p>
+</section>
+
+<!-- Financial Services Section -->
+<section id="financial" class="section services-section">
+    <h2>Financial Services</h2>
+    <p>Bookkeeping, tax preparation, payroll management, advisory, and consulting services.</p>
+</section>
+
+<!-- News & Press Section -->
+<section id="news" class="section news-section">
+    <h2>News & Press</h2>
+    <p>Latest updates, articles, and insights in accounting and finance.</p>
+</section>
+
+<!-- Footer Contact Form -->
+<footer id="contact" class="section contact-section">
+    <h2>Contact Me</h2>
+    <form method="post">
+        <input asp-for="Input.Name" placeholder="Your Name" />
+        <span asp-validation-for="Input.Name"></span>
+
+        <input asp-for="Input.Email" placeholder="Your Email" />
+        <span asp-validation-for="Input.Email"></span>
+
+        <textarea asp-for="Input.Message" placeholder="Your Message"></textarea>
+        <span asp-validation-for="Input.Message"></span>
+
+        <button type="submit">Send Message</button>
+    </form>
+</footer>

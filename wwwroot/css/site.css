@@ -1,0 +1,89 @@
+/* Reset & global */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f9fafb;
+    color: #111827;
+    scroll-behavior: smooth;
+    padding-top: 70px; /* to offset fixed header */
+    box-sizing: border-box;
+}
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1f2937;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+    .site-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+/* Sections */
+.section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* Contact Form */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-section button {
+    background: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+    .contact-section button:hover {
+        background: #111827;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
