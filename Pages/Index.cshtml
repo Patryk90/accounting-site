@@ -4,7 +4,6 @@
     Layout = "_Layout";
 }
 
-<!-- Fixed Header -->
 <header>
     <nav class="site-nav">
         <a href="#home">Home</a>
@@ -14,26 +13,73 @@
     </nav>
 </header>
 
-<!-- Home / Profile Section -->
 <section id="home" class="section profile-card">
-    <h1>John Doe</h1>
+    <h1>Magdalena Laskowicz</h1>
     <h2>Accounting Specialist</h2>
     <p>Helping small businesses stay compliant, organized, and financially confident.</p>
+
+    <div class="services">
+        <div class="service">
+            <!-- Bookkeeping Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Bookkeeping</span>
+        </div>
+
+        <div class="service">
+            <!-- Tax Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 17v-4h6v4m-6 0h6m-6 0V7h6v10" />
+            </svg>
+            <span>Tax Preparation</span>
+        </div>
+
+        <div class="service">
+            <!-- Payroll Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+            <span>Payroll Management</span>
+        </div>
+    </div>
 </section>
 
-<!-- Financial Services Section -->
 <section id="financial" class="section services-section">
     <h2>Financial Services</h2>
-    <p>Bookkeeping, tax preparation, payroll management, advisory, and consulting services.</p>
+    <div class="services-list">
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 10h18M3 14h18M3 18h18" />
+            </svg>
+            <span>Bookkeeping & Reporting</span>
+        </div>
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+            <span>Payroll & HR Management</span>
+        </div>
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 17v-4h6v4m-6 0h6m-6 0V7h6v10" />
+            </svg>
+            <span>Tax Preparation & Advisory</span>
+        </div>
+    </div>
 </section>
 
-<!-- News & Press Section -->
 <section id="news" class="section news-section">
     <h2>News & Press</h2>
     <p>Latest updates, articles, and insights in accounting and finance.</p>
 </section>
 
-<!-- Footer Contact Form -->
 <footer id="contact" class="section contact-section">
     <h2>Contact Me</h2>
     <form method="post">
