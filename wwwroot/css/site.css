@@ -94,6 +94,7 @@ header {
     height: 24px;
     color: #1f2937;
     margin-right: 0.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Services flex layout */
@@ -110,4 +111,18 @@ header {
     gap: 0.5rem;
     flex: 1 1 150px; /* responsive width */
     justify-content: center;
+}
+
+/* On hover: scale slightly and change color */
+.service:hover .icon,
+.service-item:hover .icon {
+    transform: scale(1.2);
+    color: #2563eb; /* subtle blue */
+}
+
+/* Optional: also slightly move text for a polished feel */
+.service:hover span,
+.service-item:hover span {
+    color: #2563eb;
+    transition: color 0.2s ease;
 }
