@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog for file + console logging
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Error()                 // log info, warnings, errors
+    .MinimumLevel.Information()                 // log info, warnings, errors
     .WriteTo.Console()                          // optional: also log to console
     .WriteTo.File("Logs/app.log", rollingInterval: RollingInterval.Day) // one file per day
     .CreateLogger();
