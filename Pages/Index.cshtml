@@ -14,9 +14,9 @@
 </header>
 
 <section id="home" class="section profile-card">
-    <h1>Magdalena Laskowicz</h1>
+    <h1>Dr Magda Laskowicz</h1>
     <h2>Accounting Specialist</h2>
-    <p>Helping small businesses stay compliant, organized, and financially confident.</p>
+    <p>I help small businesses and individuals manage finances, stay compliant, and make better financial decisions.</p>
 
     <div class="services">
         <div class="service">
@@ -46,6 +46,7 @@
             <span>Payroll Management</span>
         </div>
     </div>
+
 </section>
 
 <section id="financial" class="section services-section">
@@ -75,23 +76,71 @@
     </div>
 </section>
 
-<section id="news" class="section news-section">
-    <h2>News & Press</h2>
-    <p>Latest updates, articles, and insights in accounting and finance.</p>
+<section id="news" class="section">
+    <h2>Latest Insights</h2>
+
+    <div class="blog-list">
+
+        <a href="https://www.instagram.com/p/POST1/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Understanding Business Expenses</h3>
+            <p>Key tips on how to properly track and categorize your expenses.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST2/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Tax Mistakes to Avoid</h3>
+            <p>Common errors that can cost your business money.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST3/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Invoice Best Practices</h3>
+            <p>How to create clear and professional invoices.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST4/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Financial Organization Tips</h3>
+            <p>Simple habits to keep your finances under control.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST5/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Monthly Closing Checklist</h3>
+            <p>What to review at the end of each month.</p>
+        </a>
+
+    </div>
 </section>
 
-<footer id="contact" class="section contact-section">
-    <h2>Contact Me</h2>
-    <form method="post">
-        <input asp-for="Input.Name" placeholder="Your Name" />
-        <span asp-validation-for="Input.Name"></span>
+<section id="contact" class="section contact-section">
+    <h2>Contact</h2>
 
-        <input asp-for="Input.Email" placeholder="Your Email" />
-        <span asp-validation-for="Input.Email"></span>
+    <p class="contact-intro">
+        Get in touch to discuss accounting services, financial reporting, or collaboration opportunities.
+    </p>
 
-        <textarea asp-for="Input.Message" placeholder="Your Message"></textarea>
-        <span asp-validation-for="Input.Message"></span>
+    <form method="post" asp-action="Contact">
 
-        <button type="submit">Send Message</button>
+        <div class="form-group">
+            <input type="text" name="Name" required>
+            <label>Your Name</label>
+        </div>
+
+        <div class="form-group">
+            <input type="email" name="Email" required>
+            <label>Email Address</label>
+        </div>
+
+        <div class="form-group">
+            <textarea name="Message" rows="4" required></textarea>
+            <label>Your Message</label>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Send Request
+        </button>
+
     </form>
-</footer>
+</section>
