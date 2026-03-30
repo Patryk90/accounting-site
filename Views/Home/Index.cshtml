@@ -1,0 +1,156 @@
+﻿@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<header>
+    <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#financial">Financial Services</a>
+        <a href="#news">News & Press</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="section profile-card">
+    <h1>Dr Magda Laskowicz</h1>
+    <h2>Accounting Specialist</h2>
+    <p>I help small businesses and individuals manage finances, stay compliant, and make better financial decisions.</p>
+
+    <div class="services">
+        <div class="service">
+            <!-- Bookkeeping Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Bookkeeping</span>
+        </div>
+
+        <div class="service">
+            <!-- Tax Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 17v-4h6v4m-6 0h6m-6 0V7h6v10" />
+            </svg>
+            <span>Tax Preparation</span>
+        </div>
+
+        <div class="service">
+            <!-- Payroll Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+            <span>Payroll Management</span>
+        </div>
+    </div>
+
+</section>
+
+<section id="financial" class="section services-section">
+    <h2>Financial Services</h2>
+    <div class="services-list">
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 10h18M3 14h18M3 18h18" />
+            </svg>
+            <span>Bookkeeping & Reporting</span>
+        </div>
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+            <span>Payroll & HR Management</span>
+        </div>
+        <div class="service-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 17v-4h6v4m-6 0h6m-6 0V7h6v10" />
+            </svg>
+            <span>Tax Preparation & Advisory</span>
+        </div>
+    </div>
+</section>
+
+<section id="news" class="section">
+    <h2>Latest Insights</h2>
+
+    <div class="blog-list">
+
+        <a href="https://www.instagram.com/p/POST1/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Understanding Business Expenses</h3>
+            <p>Key tips on how to properly track and categorize your expenses.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST2/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Tax Mistakes to Avoid</h3>
+            <p>Common errors that can cost your business money.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST3/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Invoice Best Practices</h3>
+            <p>How to create clear and professional invoices.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST4/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Financial Organization Tips</h3>
+            <p>Simple habits to keep your finances under control.</p>
+        </a>
+
+        <a href="https://www.instagram.com/p/POST5/" target="_blank" class="blog-item">
+            <span class="blog-date">Instagram • Recent</span>
+            <h3>Monthly Closing Checklist</h3>
+            <p>What to review at the end of each month.</p>
+        </a>
+
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <h2>Contact</h2>
+
+    <p class="contact-intro">
+        Get in touch to discuss accounting services, financial reporting, or collaboration opportunities.
+    </p>
+
+    <form asp-controller="Home" asp-action="Contact" method="post" action="/Home/Contact">
+        
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <input type="text" name="Name" required>
+            <label>Your Name</label>
+        </div>
+
+        <div class="form-group">
+            <input type="email" name="Email" required>
+            <label>Email Address</label>
+        </div>
+
+        <div class="form-group">
+            <textarea name="Message" rows="4" required maxlength="2000"></textarea>
+            <label>Your Message</label>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Submit Form
+        </button>
+
+    </form>
+    
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+</section>
